@@ -83,6 +83,25 @@ lazy_static! {
         alternating_tint_fg: None.to_owned(),
     };
 
+    pub static ref SRCERY: Theme = Theme {
+        native_separators: Some(false),
+        idle_bg: Some(String::from("#1C1B19")),      // black
+        idle_fg: Some(String::from("#FCE8C3")),      // brightwhite
+        info_bg: Some(String::from("#1C1B19")),      // black
+        info_fg: Some(String::from("#FCE8C3")),      // brightwhite
+        good_bg: Some(String::from("#1C1B19")),      // black
+        good_fg: Some(String::from("#98BC37")),      // brightgreen
+        warning_bg: Some(String::from("#1C1B19")),   // black
+        warning_fg: Some(String::from("#FED06E")),   // brightyellow
+        critical_bg: Some(String::from("#1C1B19")),  // black
+        critical_fg: Some(String::from("#F75341")),  // brightred
+        separator: "".to_owned(),
+        separator_bg: Some(String::from("auto")),
+        separator_fg: Some(String::from("auto")),
+        alternating_tint_bg: None.to_owned(),
+        alternating_tint_fg: None.to_owned(),
+    };
+
     pub static ref PLAIN: Theme = Theme {
         native_separators: Some(false),
         idle_bg: Some(String::from("#000000")),
@@ -259,6 +278,7 @@ impl Theme {
             "space-villain" => Some(SPACE_VILLAIN.clone()),
             "semi-native" => Some(SEMI_NATIVE.clone()),
             "native" => Some(NATIVE.clone()),
+            "srcery" => Some(SRCERY.clone()),
             _ => None,
         }
     }
